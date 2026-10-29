@@ -12,6 +12,15 @@ npm install
 
 ## Commands
 
+Run an example with ts-node:
+
+```sh
+npm run example -- src/hakerrank/solve-me-first/solveMeFirst.ts
+```
+
+Pass the path to any TypeScript example after `--`. Examples that read standard
+input accept piped input or input typed in the terminal.
+
 Run the test suite once:
 
 ```sh
