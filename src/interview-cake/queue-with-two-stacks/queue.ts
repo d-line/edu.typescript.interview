@@ -9,6 +9,7 @@ export default class Queue<T> {
     dequeue(): T | undefined {
         if (this.outStack.length === 0) {
             while (this.inStack.length > 0) {
+                // Safe to use '!' because we just checked inStack is not empty
                 this.outStack.push(this.inStack.pop()!);
             }
         }
@@ -18,6 +19,7 @@ export default class Queue<T> {
     peek(): T | undefined {
         if (this.outStack.length === 0) {
             while (this.inStack.length > 0) {
+                // Safe to use '!' because we just checked inStack is not empty
                 this.outStack.push(this.inStack.pop()!);
             }
         }
